@@ -3,6 +3,13 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+
+## Activate PyCharm
+https://www.codeblogbt.com/archives/282803
+>**Tech:**  `pycharm`, `python`
+>**Date:** 2019-01-22
+
+
 ## check out a remote Git branch
 `git checkout -b feature_connect_issue remotes/origin/feature_connect_issue`
 https://stackoverflow.com/a/1783426/705293
