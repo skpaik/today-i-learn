@@ -2,6 +2,24 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+## Install Python & Django on Windows
+`pip install virtualenv`
+
+`virtualenv yourenvname`
+
+`cd yourenvname`
+
+`.\Scripts\activate`
+
+`pip install django`
+
+`deactivate`
+
+https://www.codingforentrepreneurs.com/blog/install-python-django-on-windows/
+>**Tech:**  `django`, `python`
+
+>**Date:** 2019-01-23
+
 
 
 ## Activate PyCharm
