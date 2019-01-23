@@ -5,9 +5,9 @@ Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 ## Install Python & Django on Windows
 `pip install virtualenv`
 
-`virtualenv yourenvname`
+`virtualenv venv`
 
-`cd yourenvname`
+`cd venv`
 
 `.\Scripts\activate`
 
