@@ -3,6 +3,14 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+## Docker entering file system
+`docker ps`
+
+`docker exec -it name-of-container bash`
+>**Tech:**  `docker`
+
+>**Date:** 2019-02-07
+
 
 ## Unit Testing in ExpressJs(NodeJs)
 Ref: https://codehandbook.org/unit-test-express-route
