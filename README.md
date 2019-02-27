@@ -3,6 +3,32 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+
+## Mongo dump and restore command
+Dump or Take backup:
+
+`mongodump -h 127.0.0.1:27017 -d dbname --out bjson_folder`
+
+Restore to database:
+
+`mongorestore -h 127.0.0.1:27017 -d dbname bjson_folder/dbname`
+
+
+>**Here:** 
+
+>Host = 127.0.0.1:27017(-h)
+
+>Database name = dbname(-d)
+
+>Dump locations BSON/JSON files = bjson_folder/(dbname auto create)(--out)
+
+>Restore Locations of backup BSON/JSON folders = bjson_folder/dbname
+
+>**Tech:**  `mongodb`
+
+>**Date:** 2019-02-27
+
+
 ## Docker entering file system
 `docker ps`
 
