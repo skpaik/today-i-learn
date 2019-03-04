@@ -3,6 +3,21 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+
+## installing MySQL in Ubuntu
+Install the MySQL server by using the Ubuntu package manager:
+
+`sudo apt-get update`
+
+`sudo apt-get install mysql-server`
+
+Ref: https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
+>**Tech:**  `mysql`, `ubuntu`
+
+>**Date:** 2019-03-04
+
+
+
 ## Uninstalling MySQL in Ubuntu
 
 Use apt to uninstall and remove all MySQL packages:
