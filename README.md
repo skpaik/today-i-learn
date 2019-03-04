@@ -3,6 +3,29 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+## Uninstalling MySQL in Ubuntu
+
+Use apt to uninstall and remove all MySQL packages:
+
+`sudo apt-get remove --purge mysql-server mysql-client mysql-common -y`
+
+`sudo apt-get autoremove -y`
+
+`sudo apt-get autoclean`
+
+Remove the MySQL folder:
+
+`sudo rm -rf /etc/mysql`
+
+Delete all MySQL files on your server:
+
+`sudo find / -iname 'mysql*' -exec rm -rf {} \;`
+
+Ref: https://help.cloud66.com/node/how-to-guides/databases/shells/uninstall-mysql.html
+
+>**Tech:**  `'mysql'`, `ubuntu`
+>**Date:** 2019-03-04
+
 
 ## Mongo dump and restore command
 Dump or Take backup:
