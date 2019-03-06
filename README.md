@@ -3,7 +3,48 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
-## installing nano and vim in docker/Ubuntu
+## Remove Docker Containers, Images, Volumes, and Networks
+
+Removing All Unused Objects
+
+`sudo docker system prune`
+
+Remove all unused volumes
+
+`sudo docker system prune --volumes`
+
+List of all active and inactive images
+`sudo docker image ls -a`
+
+Remove one or more images
+
+`sudo docker image rm 75835a67d134 2a4cca5ac898`// Here '75835a67d134' & '2a4cca5ac898' is image ID
+
+List of all active and inactive containers
+
+`sudo docker container ls -a`
+
+Remove one or more containers
+
+`sudo docker container rm cc3f2ff51cab cd20b396a061` // Here 'cc3f2ff51cab' & 'cd20b396a061' is container ID
+
+
+Stop and remove all containers
+
+`sudo docker container stop $(sudo docker container ls -aq)`
+
+`sudo docker container rm $(sudo docker container ls -aq)`
+
+Ref: https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks
+>**Tech:**  `docker`, `ubuntu`
+
+>**Date:** 2019-03-06
+
+
+
+
+
+## Installing nano and vim in docker/Ubuntu
 
 `apt-get update`
 
@@ -15,7 +56,7 @@ Ref: https://stackoverflow.com/a/37156748/705293
 >**Date:** 2019-03-06
 
 
-## installing MySQL in Ubuntu
+## Installing MySQL in Ubuntu
 Install the MySQL server by using the Ubuntu package manager:
 
 `sudo apt-get update`
@@ -134,7 +175,7 @@ Ref: https://www.codeblogbt.com/archives/282803
 >**Date:** 2019-01-22
 
 
-## check out a remote Git branch
+## Check out a remote Git branch
 `git checkout -b feature_connect_issue remotes/origin/feature_connect_issue`
 Ref: https://stackoverflow.com/a/1783426/705293
 >**Tech:**  `'git'`
