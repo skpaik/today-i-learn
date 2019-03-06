@@ -3,6 +3,17 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+## installing nano and vim in docker/Ubuntu
+
+`apt-get update`
+
+`apt-get install vim nano`
+
+Ref: https://stackoverflow.com/a/37156748/705293
+>**Tech:**  `vim`, `docker`, `nano`, `ubuntu`
+
+>**Date:** 2019-03-06
+
 
 ## installing MySQL in Ubuntu
 Install the MySQL server by using the Ubuntu package manager:
