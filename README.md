@@ -170,7 +170,10 @@ Ref: https://www.codingforentrepreneurs.com/blog/install-python-django-on-window
 
 
 ## Activate PyCharm
-Ref: https://www.codeblogbt.com/archives/282803
+* Ref: https://www.codeblogbt.com/archives/282803   
+* Or you can activate using [PyCharm_Activation_Code.txt](#https://github.com/skpaik/today-i-learn/blob/master/PyCharm_Activation_Code.txt)
+* Before activate please update hosts file to   
+`0.0.0.0 account.jetbrains.com`
 >**Tech:**  `pycharm`, `python`
 >**Date:** 2019-01-22
 
