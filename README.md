@@ -96,7 +96,9 @@ Ref: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ##### Uninstall old versions:
 `sudo apt-get remove docker docker-engine docker.io containerd runc`
 
-Ref: https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks
+Ref: 
+1. https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks
+2. https://askubuntu.com/a/1021506/700201
 >**Tech:**  `docker`, `ubuntu`
 
 >**Date:** 2019-03-06
