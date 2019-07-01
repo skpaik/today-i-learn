@@ -35,6 +35,24 @@ Stop and remove all containers
 
 `sudo docker container rm $(sudo docker container ls -aq)`
 
+
+Completely uninstall docker
+
+Step 1:    
+`sudo dpkg -l | grep -i docker`    
+
+Step 2:    
+`sudo apt-get purge -y docker-engine docker docker.io docker-ce`    
+`sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce`    
+
+Step 3:    
+`sudo rm -rf /var/lib/docker`    
+`sudo rm /etc/apparmor.d/docker`    
+`sudo groupdel docker`    
+`sudo rm -rf /var/run/docker.sock`    
+
+
+
 Ref: https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks
 >**Tech:**  `docker`, `ubuntu`
 
