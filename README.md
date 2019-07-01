@@ -5,53 +5,54 @@ Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 ## Remove Docker Containers, Images, Volumes, and Networks
 
-Removing All Unused Objects
+##### Removing All Unused Objects
 
 `sudo docker system prune`
 
-Remove all unused volumes
+##### Remove all unused volumes
 
 `sudo docker system prune --volumes`
 
-List of all active and inactive images
+##### List of all active and inactive images
 `sudo docker image ls -a`
 
-Remove one or more images
+##### Remove one or more images
 
 `sudo docker image rm 75835a67d134 2a4cca5ac898`// Here '75835a67d134' & '2a4cca5ac898' is image ID
 
-List of all active and inactive containers
+##### List of all active and inactive containers
 
 `sudo docker container ls -a`
 
-Remove one or more containers
+##### Remove one or more containers
 
 `sudo docker container rm cc3f2ff51cab cd20b396a061` // Here 'cc3f2ff51cab' & 'cd20b396a061' is container ID
 
 
-Stop and remove all containers
+##### Stop and remove all containers
 
 `sudo docker container stop $(sudo docker container ls -aq)`
 
 `sudo docker container rm $(sudo docker container ls -aq)`
 
 
-Completely uninstall docker
+##### Completely uninstall docker
 
-Step 1:    
+##### Step 1:    
 `sudo dpkg -l | grep -i docker`    
 
-Step 2:    
+##### Step 2:    
 `sudo apt-get purge -y docker-engine docker docker.io docker-ce`    
 `sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce`    
 
-Step 3:    
+##### Step 3:    
 `sudo rm -rf /var/lib/docker`    
 `sudo rm /etc/apparmor.d/docker`    
 `sudo groupdel docker`    
 `sudo rm -rf /var/run/docker.sock`    
 
-
+##### Uninstall old versions:
+`sudo apt-get remove docker docker-engine docker.io containerd runc`
 
 Ref: https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks
 >**Tech:**  `docker`, `ubuntu`
