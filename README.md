@@ -75,7 +75,9 @@ Ref: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 `sudo docker container stop $(sudo docker container ls -aq)`
 
-`sudo docker container rm $(sudo docker container ls -aq)`
+`sudo docker container rm $(sudo docker container ls -aq)`   
+
+N.B.: if no container running, then error may shown.
 
 
 ##### Completely uninstall docker
