@@ -2,6 +2,27 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+
+## Python3 Virtualenv in MAC OS
+
+##### 1. Install virtualenv
+`sudo pip install virtualenv`
+
+##### 2. Start virtualenv in python3
+`virtualenv -p python3 .env`
+Here **.env** is environment name
+
+##### 3. Activate virtualenv in python3
+`source .env/bin/activate`
+
+##### 3. Deactivate virtualenv in python3
+`source deactivate`
+
+>**Tech:**  `python3`, `virtualenv`, `mac`
+
+>**Date:** 2019-10-31
+
+
 ## Install Docker CE in Ubuntu
 
 ##### 1. Update the `apt` package index:
