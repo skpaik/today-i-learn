@@ -2,6 +2,29 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+## Edit Mac's Hosts file
+Install the MySQL server by using the Ubuntu package manager:
+
+- Open a Finder window.
+- Select Applications from the sidebar.
+- Double-click on Utilities.
+- Double-click Terminal.
+- type `sudo nano /etc/hosts` and then hit return.
+- Enter your administrator password and then hit return.
+Once you're done, hold down the control and O keys to save the file, then control and X to exit.
+- One last step: `sudo killall -HUP mDNSResponder`
+
+Ref: https://www.imore.com/how-edit-your-macs-hosts-file-and-why-you-would-want#how-to-edit-the-hosts-file
+>**Tech:**  `host`, `mac`
+
+>**Date:** 2019-11-13
+
+
+
+
+
+
+
 
 ## Python3 Virtualenv in MAC OS
 
