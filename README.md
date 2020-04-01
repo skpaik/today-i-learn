@@ -2,6 +2,31 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+## Python apply `PEP8` Standard
+
+[cmd] in active virtualenv
+  
+  `pip install isort`
+
+From the command line:
+
+  `isort mypythonfile.py mypythonfile2.py`
+
+From recursively:
+
+  `isort -rc .`
+
+or to see the proposed changes without applying them:
+
+  `isort mypythonfile.py --diff`
+
+Ref: https://pypi.org/project/isort/
+>**Tech:**  `python`, `pep8`, `standard`
+
+>**Date:** 2020-04-01
+
+
+
 ## Edit Mac's Hosts file
 Install the MySQL server by using the Ubuntu package manager:
 
