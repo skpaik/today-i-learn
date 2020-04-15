@@ -2,6 +2,19 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+
+## Git Reset hard head
+
+[cmd] in terminar
+  
+  `git reset --hard HEAD`
+
+Ref: https://stackoverflow.com/q/9529078
+>**Tech:**  `git`, `reset`
+
+>**Date:** 2020-04-15
+
+
 ## Python apply `PEP8` Standard
 
 [cmd] in active virtualenv
