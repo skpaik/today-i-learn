@@ -145,6 +145,12 @@ Ref: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 `sudo docker image rm 75835a67d134 2a4cca5ac898`// Here '75835a67d134' & '2a4cca5ac898' is image ID
 
+##### Delete all local Docker images
+`docker rmi -f $(docker images -a -q)`
+
+##### Delete all Docker containers including its volumes use
+`docker rm -vf $(docker ps -a -q)`
+
 ##### List of all active and inactive containers
 
 `sudo docker container ls -a`
