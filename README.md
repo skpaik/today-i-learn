@@ -71,6 +71,10 @@ Ref: https://www.imore.com/how-edit-your-macs-hosts-file-and-why-you-would-want#
 
 ##### 2. Start virtualenv in python3
 > `virtualenv -p python3 .env`
+> 
+>#OR
+> 
+> `python3 -m venv .env`
 
 Here **.env** is environment name
 
