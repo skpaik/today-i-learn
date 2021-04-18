@@ -2,6 +2,11 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+# Generating the SSH keys
+`ssh-keygen -t rsa -C "paik@newcompany.com" -f "id_rsa_github_newcompany"`
+
+`ssh-keygen -t rsa -C "me@gmail.com" -f "id_rsa_github_personal"`
+
 
 ## Git Reset hard head
 
