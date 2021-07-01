@@ -3,6 +3,17 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
 
+# Linux release used ports
+`lsof -i:8080`
+
+OR
+
+`lsof -i:5000`
+
+OR
+
+`lsof -i:3000`
+
 
 # Linux check used ports
 `netstat -tulpn | grep LISTEN`
