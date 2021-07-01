@@ -2,8 +2,21 @@
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 
+
+
+# Linux check used ports
+`netstat -tulpn | grep LISTEN`
+
+OR
+
+`sudo lsof -i -P -n | grep LISTEN`
+
+
+
 # Generating the SSH keys
 `ssh-keygen -t rsa -C "paik@newcompany.com" -f "id_rsa_github_newcompany"`
+
+OR
 
 `ssh-keygen -t rsa -C "me@gmail.com" -f "id_rsa_github_personal"`
 
