@@ -1,6 +1,6 @@
 #!/bin/bash
-cmdStart='apt-get'
-#cmdStart='yum'
+cmdStart='apt-get' #Ubuntu
+#cmdStart='yum' #AWS EC2 Linux
 
 #Perform a quick update on your instance:
 sudo $cmdStart update -y
