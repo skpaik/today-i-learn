@@ -3,7 +3,10 @@
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
 # Kill nodejs process
 
-Command 1: `ps aux | grep node`
+Command 1: 
+```
+ps aux | grep node
+```
 
 Output
 
@@ -14,7 +17,10 @@ Output
    
 Find the process ID (second from the left):
 
-Command 2: `kill -9 PROCESS_ID`
+Command 2: 
+```
+kill -9 PROCESS_ID
+```
 
 Example 
 
@@ -24,42 +30,74 @@ Example
    
 This may also work
 
-`sudo killall node`
+```
+sudo killall node
+```
 
 # Linux release used ports
-`lsof -i:8080`
+
+Command 1: 
+```
+lsof -i:8080
+```
 
 OR
 
-`lsof -i:5000`
+Command 2: 
+```
+lsof -i:5000
+```
 
 OR
 
-`lsof -i:3000`
+Command 3: 
+```
+lsof -i:3000
+```
 
 
 # Linux check used ports
-`netstat -tulpn | grep LISTEN`
+
+Command 1: 
+
+```
+netstat -tulpn | grep LISTEN
+```
 
 OR
 
-`sudo lsof -i -P -n | grep LISTEN`
+Command 2: 
+
+```
+sudo lsof -i -P -n | grep LISTEN
+```
 
 
 
 # Generating the SSH keys
-`ssh-keygen -t rsa -C "paik@newcompany.com" -f "id_rsa_github_newcompany"`
+Command 1: 
+
+```
+ssh-keygen -t rsa -C "paik@newcompany.com" -f "id_rsa_github_newcompany"
+```
 
 OR
 
-`ssh-keygen -t rsa -C "me@gmail.com" -f "id_rsa_github_personal"`
+
+Command 2: 
+
+```
+ssh-keygen -t rsa -C "me@gmail.com" -f "id_rsa_github_personal"
+```
 
 
 ## Git Reset hard head
 
-[cmd] in terminar
+[cmd] in terminal
   
-  `git reset --hard HEAD`
+  ```
+  git reset --hard HEAD
+  ```
 
 Ref: https://stackoverflow.com/q/9529078
 >**Tech:**  `git`, `reset`
