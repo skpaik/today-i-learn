@@ -1,7 +1,30 @@
 # Today I Learn ([@skpaik](https://skpaik.github.io "@skpaik"))
 
 Hi! I'm Sudipta Kumar Paik. I write everthing, what I learn everyday.
+# Kill nodejs process
 
+Command 1: `ps aux | grep node`
+
+Output
+
+   ```
+   root        3766  0.5 13.3 989252 130196 ?       Ssl  Jul29 137:14 node /home/ubuntu/code/backend/server.js
+   ubuntu     55299  0.0  0.0   8168   736 pts/0    S+   08:46   0:00 grep --color=auto node
+   ```
+   
+Find the process ID (second from the left):
+
+Command 2: `kill -9 PROCESS_ID`
+
+Example 
+
+   ```
+   sudo kill -9 3766
+   ```
+   
+This may also work
+
+`sudo killall node`
 
 # Linux release used ports
 `lsof -i:8080`
