@@ -2,6 +2,24 @@
 
 Hi I'm Sudipta Kumar Paik. I write everything, what I learn every day.
 
+# Create Command file
+Create a fine in root of the project. Named `run.sh`
+Add following contents
+```shell
+#!/usr/bin/env bash
+npm run deploy:sam:dev:feature feature-DXP-4868
+.
+.
+```
+Add Permission
+```shell
+chmod +x ./run.sh
+```
+To run the file
+```shell
+./run.sh
+```
+
 # Kill nodejs process
 
 Command 1:
