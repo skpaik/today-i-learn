@@ -2,6 +2,21 @@
 
 Hi I'm Sudipta Kumar Paik. I write everything, what I learn every day.
 
+# Auto generate aws credential on local machine
+Download file  [aws_credentials_create.js](https://github.com/skpaik/today-i-learn/blob/master/aws_credentials_create.js)
+
+Open file ad add list of aws credentails on `const accounts =` line 5
+
+Add Permission
+```shell
+chmod +x ./aws_credentials_create.js
+```
+To run the file
+```shell
+./aws_credentials_create.js
+```
+
+
 # Create Command file
 Create a fine in root of the project. Named `run.sh`
 Add following contents
