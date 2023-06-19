@@ -50,6 +50,32 @@ root        3766  0.5 13.3 989252 130196 ?       Ssl  Jul29 137:14 node /home/ub
 ubuntu     55299  0.0  0.0   8168   736 pts/0    S+   08:46   0:00 grep --color=auto node
 ```
 
+Command 2:
+```
+sudo lsof -PiTCP -sTCP:LISTEN
+```
+
+Output
+
+```
+Password:
+COMMAND     PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+ControlCe  1573 sudiptambp    5u  IPv4 0xd6a1f5fb0c929ad9      0t0  TCP *:7000 (LISTEN)
+ControlCe  1573 sudiptambp    6u  IPv6 0xd6a1f5f17447b1a1      0t0  TCP *:7000 (LISTEN)
+ControlCe  1573 sudiptambp    7u  IPv4 0xd6a1f5fb0c940fc9      0t0  TCP *:5000 (LISTEN)
+ControlCe  1573 sudiptambp    8u  IPv6 0xd6a1f5f17447c9a1      0t0  TCP *:5000 (LISTEN)
+rapportd   1587 sudiptambp    4u  IPv4 0xd6a1f5fb09e2f0f9      0t0  TCP *:59400 (LISTEN)
+rapportd   1587 sudiptambp    8u  IPv6 0xd6a1f5f17a2931a1      0t0  TCP *:59400 (LISTEN)
+PanGPS     1684  root         7u  IPv4 0xd6a1f5fb0c93f9a9      0t0  TCP localhost:4767 (LISTEN)
+idea      64752 sudiptambp   14u  IPv6 0xd6a1f5f1744969a1      0t0  TCP localhost:6942 (LISTEN)
+idea      64752 sudiptambp   33u  IPv6 0xd6a1f5f1744981a1      0t0  TCP localhost:63342 (LISTEN)
+idea      64752 sudiptambp  100u  IPv6 0xd6a1f5f1744821a1      0t0  TCP localhost:59804 (LISTEN)
+java      65751 sudiptambp  237u  IPv6 0xd6a1f5f17a2a39a1      0t0  TCP localhost:59813 (LISTEN)
+com.docke 65761 sudiptambp   87u  IPv6 0xd6a1f5f17a2921a1      0t0  TCP *:27017 (LISTEN)
+```
+
+
+
 Find the process ID (second from the left):
 
 Command 2:
