@@ -136,20 +136,28 @@ Command 2:
 sudo lsof -i -P -n | grep LISTEN
 ```
 
-# Generating the SSH keys
+# Generating the SSH keys for github.com
 
-Command 1:
+Command 1: For company use
 
 ```
-ssh-keygen -t rsa -C "paik@newcompany.com" -f "id_rsa_github_newcompany"
+ssh-keygen -t ed25519 -C "info@newCompany.com" -f "id_rsa_github_newCompany"
 ```
 
 OR
 
-Command 2:
+Command 2: For personal use
 
 ```
-ssh-keygen -t rsa -C "me@gmail.com" -f "id_rsa_github_personal"
+ssh-keygen -t ed25519 -C "me@gmail.com" -f "id_ed25519_github_personal"
+```
+
+OR
+
+Command 3: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+
+```
+ssh-keygen -t rsa -b 4096 -C "info@newCompany.com" -f "id_rsa_github_newCompany"
 ```
 
 ## Git Reset hard head
