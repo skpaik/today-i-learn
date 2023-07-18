@@ -159,6 +159,8 @@ Command 3: If you are using a legacy system that doesn't support the Ed25519 alg
 ```
 ssh-keygen -t rsa -b 4096 -C "info@newCompany.com" -f "id_rsa_github_newCompany"
 ```
+If you want to configure github, please follow [this page](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) .
+
 
 ## Git Reset hard head
 
