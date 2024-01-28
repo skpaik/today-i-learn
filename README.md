@@ -2,6 +2,27 @@
 
 Hi I'm Sudipta Kumar Paik. I write everything, what I learn every day.
 
+
+
+# Recursively remove folders in a directory
+
+
+Remove all `.DS_Store` file from a directore
+```shell
+find . -name ".DS_Store" -print -delete
+```
+
+Remove all `target` folder from a directore
+```shell
+find . -name "target" -type d -exec rm -rf {} \;
+```
+
+Remove all `node_modules` folder from a directore
+```shell
+find . -name "node_modules" -type d -exec rm -rf {} \;
+```
+
+
 # Auto generate aws credential on local machine
 Download file  [aws_credentials_create.js](https://github.com/skpaik/today-i-learn/blob/master/aws_credentials_create.js)
 
