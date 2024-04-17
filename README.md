@@ -2,7 +2,11 @@
 
 Hi I'm Sudipta Kumar Paik. I write everything, what I learn every day.
 
+# Recursive full permission to a folder and sub folder
 
+```shell
+chmod -R 777 ./
+```
 
 # Recursively remove folders in a directory
 
