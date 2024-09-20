@@ -454,6 +454,13 @@ sudo groupdel docker
 ```
 sudo rm -rf /var/run/docker.sock
 ```
+##### Step 4:
+Download the file and open command line
+Then run 
+
+```
+sudo ./delete_docker_fully.sh
+```
 
 ##### Uninstall old versions:
 
