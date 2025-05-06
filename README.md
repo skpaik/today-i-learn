@@ -693,6 +693,34 @@ Ref: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apach
 >
 > **Date:** 2019-01-10
 
+
+## Screen
+
+Screen or GNU Screen is a terminal multiplexer. In other words, it means that you can start a screen session and then open any number of windows (virtual terminals) inside that session. Processes running in Screen will continue to run when their window is not visible even if you get disconnected.
+
+The screen package is pre-installed on most Linux distros nowadays. You can check if it is installed on your system by typing:
+
+`screen --version`
+
+Install Linux Screen on Ubuntu and Debian (if not exists) 
+
+```
+sudo apt update
+sudo apt install screen
+```
+
+### Usefull Screen Commands
+
+`screen -ls` -> See all existing screen
+`screen -r` -> Reconnect an existing screen
+`screen -S screen_name` -> Create screen with name screen_name
+`screen -r screen_id` -> Reconnect an existing screen with id e.g screen_id
+`Ctrl+A+D` *or* `screen -d` -> Detach from current screen
+`screen -S some_name -X quit` -> Kill detached session by screen name e.g some_name
+
+**See More:** https://linuxize.com/post/how-to-use-linux-screen/#working-with-linux-screen-windows
+
+
 ## Faveo
 
 Faveo is a suport ticket system. Ref: https://github.com/ladybirdweb/faveo-helpdesk
