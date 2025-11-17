@@ -1,70 +1,109 @@
 #!/bin/zsh
 
-echo "🚀 Starting WallRound macOS setup (TypeScript-only setup)..."
-echo "-------------------------------------------------------------"
+echo "===================================="
+echo "  MACBOOK SETUP FOR BACKEND ENGINEER"
+echo "===================================="
 
-# Step 1: macOS updates
-echo "🧭 Checking for macOS software updates..."
-softwareupdate --install --all
+# -----------------------------
+# 1. INSTALL XCODE CLI TOOLS
+# -----------------------------
+echo "Installing Xcode Command Line Tools (includes Git)..."
+xcode-select --install 2>/dev/null
 
-# Step 2: Developer tools (Git, compilers)
-echo "🧰 Installing Xcode command line tools..."
-xcode-select --install || echo "✅ Xcode tools already installed."
+echo "Waiting for the installation to finish..."
+until xcode-select -p &>/dev/null; do
+  sleep 5
+done
 
-# Step 3: Install Oh My Zsh
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "💫 Installing Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-  echo "✅ Oh My Zsh already installed."
-fi
+echo "Xcode CLI Tools installed."
 
-# Step 4: Install nvm and Node.js LTS
-if [ ! -d "$HOME/.nvm" ]; then
-  echo "📦 Installing NVM (Node Version Manager)..."
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-  source ~/.zshrc
-else
-  echo "✅ NVM already installed."
-fi
+# -----------------------------
+# 2. CREATE DEV FOLDERS
+# -----------------------------
+echo "Creating development folders..."
+mkdir -p ~/projects
+mkdir -p ~/.config
+mkdir -p ~/.npm-global
 
-echo "⬇️ Installing Node.js LTS..."
+echo "Folders created."
+
+# -----------------------------
+# 3. SETUP .zshrc
+# -----------------------------
+echo "Configuring .zshrc..."
+
+cat > ~/.zshrc << 'EOF'
+# -------------------------------
+#  BASIC SHELL SETTINGS
+# -------------------------------
+export TERM="xterm-256color"
+setopt autocd
+setopt correct
+setopt no_beep
+
+# -------------------------------
+#  PATHS
+# -------------------------------
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# -------------------------------
+#  GIT CONFIG
+# -------------------------------
+export GIT_MERGE_AUTOEDIT=no
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%F{cyan}[%b]%f'
+PROMPT='%F{green}%n@%m%f %1~ ${vcs_info_msg_0_} %# '
+
+# -------------------------------
+#  ALIASES
+# -------------------------------
+alias cls="clear"
+alias ll="ls -lah"
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git pull"
+
+# npm
+alias nr="npm run"
+alias ni="npm install"
+alias nis="npm install --save"
+
+# -------------------------------
+#  DEFAULT EDITOR
+# -------------------------------
+export EDITOR="code"
+
+# -------------------------------
+#  iTerm2 Integration (optional)
+# -------------------------------
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+EOF
+
+echo ".zshrc configured successfully."
+
+# -----------------------------
+# 4. RELOAD ZSH CONFIG
+# -----------------------------
+echo "Reloading zsh configuration..."
 source ~/.zshrc
-nvm install --lts
-nvm alias default lts/*
-node -v
-npm -v
 
-# Step 5: Install Docker Desktop
-echo "🐳 Downloading Docker Desktop..."
-curl -L -o ~/Downloads/Docker.dmg "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
-echo "📌 Please double-click ~/Downloads/Docker.dmg to install Docker Desktop."
+# -----------------------------
+# 5. VERIFY INSTALLATIONS
+# -----------------------------
+echo "Verifying Git installation..."
+git --version || echo "Git not found!"
 
-# Step 6: Install Visual Studio Code
-echo "💻 Downloading VS Code..."
-curl -L -o ~/Downloads/VSCode.dmg "https://update.code.visualstudio.com/latest/darwin/stable"
-echo "📌 Please double-click ~/Downloads/VSCode.dmg to install VS Code."
+echo "===================================="
+echo "  REMINDER: Install these manually:"
+echo "  - iTerm2:          https://iterm2.com"
+echo "  - Rectangle:       https://rectangleapp.com"
+echo "  - IntelliJ IDEA:   https://jetbrains.com/idea"
+echo "  - Node.js LTS:     https://nodejs.org"
+echo "===================================="
 
-# Step 7: Install Postman
-echo "📨 Downloading Postman..."
-curl -L -o ~/Downloads/Postman.zip "https://dl.pstmn.io/download/latest/osx"
-echo "📌 Please unzip and move Postman to Applications folder."
-
-# Step 8: AWS CLI v2
-echo "☁️ Installing AWS CLI..."
-curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "~/Downloads/AWSCLIV2.pkg"
-sudo installer -pkg ~/Downloads/AWSCLIV2.pkg -target /
-
-# Step 9: Verify installations
-echo "-------------------------------------------------------------"
-echo "🧪 Verifying installations..."
-echo "Node: $(node -v)"
-echo "npm: $(npm -v)"
-echo "Git: $(git --version)"
-echo "AWS CLI: $(aws --version)"
-echo "-------------------------------------------------------------"
-
-echo "🎉 Setup complete!"
-echo "Now install GUI apps by opening them from ~/Downloads and dragging into Applications."
-echo "Restart your terminal after installation."
-echo "-------------------------------------------------------------"
+echo "Setup complete! Restart your terminal."
